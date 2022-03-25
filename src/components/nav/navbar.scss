@@ -1,0 +1,119 @@
+.navbar {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 7%;
+	padding-top: 20px;
+	font-family: 'Barlow Condensed', sans-serif;
+
+	.logo {
+		z-index: 20;
+	}
+	.burgerBtn {
+		background-color: transparent;
+		border: none;
+		margin-right: 7%;
+		z-index: 20;
+	}
+	.menu {
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		right: -2000px;
+		top: 0;
+		width: 75%;
+		height: 100vh;
+		padding-left: 20%;
+		list-style: none;
+		background-color: rgba(255, 255, 255, 0.15);
+		backdrop-filter: blur(7px);
+		z-index: 11;
+		visibility: hidden;
+		transition: 0.4s ease-in;
+		li {
+			margin-bottom: 25px;
+			font-size: 2rem;
+			.link {
+				span {
+					font-weight: bold;
+				}
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+	}
+	.show {
+		visibility: visible;
+		right: 0;
+	}
+}
+@media (min-width: 550px) {
+	.navbar {
+		.burgerBtn {
+			display: none;
+		}
+		.menu {
+			display: flex;
+			position: absolute;
+			align-items: center;
+			top: 0;
+			right: 0;
+			flex-direction: row;
+			visibility: visible;
+			width: auto;
+			height: auto;
+			padding: 25px;
+			li {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-left: 25px;
+				height: 100%;
+				// background-color: red;
+				margin-bottom: 0;
+				&::after {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					width: 10%;
+					height: 4px;
+					transform: scaleX(0);
+					background-color: lightgrey;
+					border-radius: 2px;
+					transform-origin: bottom right;
+					transition: transform 0.25s ease-out;
+				}
+				&:hover::after {
+					transform: scaleX(1);
+					transform-origin: bottom left;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 1015px) {
+	.navbar {
+		.menu {
+			position: static;
+			border-radius: 0;
+			width: 50%;
+			li {
+				&::after {
+					width: 10%;
+				}
+			}
+		}
+		.menu::before {
+			content: '';
+			position: absolute;
+			left: -90%;
+			height: 2px;
+			width: 100%;
+			background-color: white;
+		}
+	}
+}

@@ -1,0 +1,116 @@
+@import url(../../main-styles/_colors.scss);
+.home {
+	position: relative;
+	background-image: url('../../assets/home/background-home-mobile.jpg');
+	background-size: cover;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	.content {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+		margin-top: 50%;
+		padding: 0 1%;
+		.description,
+		.textOverTitle,
+		.title {
+			text-align: center;
+		}
+		.title {
+			margin-bottom: 30px;
+            text-transform: uppercase;
+		}
+		.textOverTitle {
+			font-size: 2.5rem;
+			margin-bottom: 15px;
+		}
+		.description {
+			font-size: 1.8rem;
+		}
+	}
+	.exploreContainer {
+		position: absolute;
+		bottom: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.exploreBackground {
+			position: absolute;
+			opacity: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			background-color: rgba(255, 255, 255, 0.15);
+			backdrop-filter: blur(2px);
+			transition: opacity 0.3s ease-in;
+			&.active {
+				opacity: 1;
+			}
+		}
+		.exploreBtn {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			text-transform: uppercase;
+			text-decoration: none;
+			background-color: white;
+			color: black;
+			border: none;
+			font-size: 2.2rem;
+			z-index: 10;
+		}
+	}
+}
+@media (min-width: 426px) {
+	.home {
+		background-image: url('../../assets/home/background-home-tablet.jpg');
+	}
+}
+@media (min-width: 1025px) {
+	.home {
+		justify-content: flex-start;
+		background-image: url('../../assets/home/background-home-desktop.jpg');
+		.content {
+            margin-top: 40%;
+			align-items: flex-start;
+			margin-left: 150px;
+			width: 450px;
+			padding: 0;
+			.description,
+			.textOverTitle,
+			.title {
+				text-align: start;
+			}
+			.title {
+				font-size: 15rem;
+				margin-bottom: 10px;
+			}
+			.textOverTitle {
+				font-size: 4rem;
+				margin-bottom: 0;
+			}
+			.description {
+				font-size: 2rem;
+			}
+		}
+		.exploreContainer {
+			right: 100px;
+			bottom: 150px;
+			.exploreBackground {
+				width: 334px;
+				height: 334px;
+			}
+			.exploreBtn {
+				width: 274px;
+				height: 274px;
+			}
+		}
+	}
+}
