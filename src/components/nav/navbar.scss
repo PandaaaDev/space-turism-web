@@ -30,7 +30,7 @@
 		padding-left: 20%;
 		list-style: none;
 		background-color: rgba(255, 255, 255, 0.15);
-		backdrop-filter: blur(7px);
+		backdrop-filter: blur(15px);
 		z-index: 11;
 		visibility: hidden;
 		transition: 0.4s ease-in;
@@ -111,7 +111,7 @@
 			content: '';
 			position: absolute;
 			left: -90%;
-			height: 2px;
+			height: 1px;
 			width: 100%;
 			background-color: white;
 		}
