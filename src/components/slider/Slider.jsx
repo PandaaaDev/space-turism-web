@@ -1,9 +1,11 @@
 import React from 'react'
 
-const Slider = () => {
-  return (
-    <div>Slider</div>
-  )
+const Slider = ({ data, changeSlideHadler }) => {
+	return data.map(e => (
+		<div className='sliderBtn' onClick={() => changeSlideHadler(e.id)}>
+			{e.name}
+		</div>
+	))
 }
 
 export default Slider
