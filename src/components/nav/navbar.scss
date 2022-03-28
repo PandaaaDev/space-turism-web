@@ -68,28 +68,42 @@
 			height: auto;
 			padding: 25px;
 			li {
+				position: relative;
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				margin-left: 25px;
-				height: 100%;
-				// background-color: red;
+				width: 100px;
 				margin-bottom: 0;
 				&::after {
 					content: '';
 					position: absolute;
-					bottom: 0;
-					width: 10%;
-					height: 4px;
+					bottom: -25px;
+					width: 50px;
+					height: 3px;
 					transform: scaleX(0);
-					background-color: lightgrey;
-					border-radius: 2px;
-					transform-origin: bottom right;
+					background-color: #d0d6f9;					transform-origin: bottom right;
 					transition: transform 0.25s ease-out;
 				}
 				&:hover::after {
 					transform: scaleX(1);
 					transform-origin: bottom left;
+				}
+				.link {
+					transition: color 0.2s ease-out;
+					&:hover{
+						color: #d0d6f9;
+					}
+					&.active::before {
+						content: '';
+						display: flex;
+						position: absolute;
+						bottom: -25px;
+						height: 3px;
+						width: 50px;
+						left: 25px;
+						background-color: white;
+					}
 				}
 			}
 		}
@@ -103,7 +117,7 @@
 			width: 50%;
 			li {
 				&::after {
-					width: 10%;
+					width: 50px;
 				}
 			}
 		}

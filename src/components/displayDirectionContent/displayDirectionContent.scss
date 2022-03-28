@@ -1,0 +1,62 @@
+.displayContentContainer {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 20px;
+	.top {
+		text-align: center;
+		border-bottom: 1px solid grey;
+		.name {
+			text-transform: uppercase;
+		}
+		.description {
+			height: 110px;
+		}
+	}
+	.bottom {
+		width: 100%;
+		text-align: center;
+
+		.bottomData {
+			font-size: 2.8rem;
+			color: white;
+			font-family: 'Bellefair', serif;
+
+		}
+		.titleDistance,
+		.titleTravel {
+			margin: 25px 0;
+			text-transform: uppercase;
+		}
+	}
+}
+@media (min-width: 767px) {
+	.displayContentContainer {
+		.top{
+			.description{
+				height: 80px;
+			}
+		}
+		.bottom {
+			display: flex;
+			justify-content: center;
+			gap: 50px;
+		}
+	}
+}
+@media (min-width: 1023px) {
+	.displayContentContainer {
+		.top{
+			text-align: left;
+			border-bottom: none;
+			.description{
+				height: 80px;
+			}
+		}
+		.bottom{
+			border-top: 1px solid grey;
+			justify-content: flex-start;
+			text-align: left;
+		}
+	}
+}

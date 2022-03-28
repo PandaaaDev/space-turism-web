@@ -1,25 +1,29 @@
 import React, { useState } from 'react'
 import Navbar from '../../components/nav/Navbar'
-import DisplayContent from '../../components/displayContent/DisplayContent'
+import DisplayDirectionContent from '../../components/displayDirectionContent/DisplayDirectionContent'
 import DisplayImg from '../../components/displayImg/DisplayImg'
+import Tabs from '../../components/tabs/Tabs'
 import './destination.scss'
-import Slider from '../../components/slider/Slider'
 const Destination = ({ Data }) => {
 	const [display, setDisplay] = useState(0)
 	const displayChangeHanlder = id => {
 		setDisplay(id)
 	}
-	console.log(display === Data[0].id)
 	return (
 		<div className='destination'>
 			<Navbar page='destination' />
-			<DisplayImg className='destinationImg' data={Data[display]} />
 			<div className='container'>
-				<div className='sliderBtns'>
-					<Slider data ={Data} changeSlideHadler={displayChangeHanlder}/>
+				<div className='left'>
+					<div className='title'>
+						<span>01</span>pick your destination
+					</div>
+					<DisplayImg className='destinationImg' data={Data[display]} />
+				</div>
+				<div className='right'>
+					<Tabs displayState={display} data={Data} changeSlide={displayChangeHanlder} />
+					<DisplayDirectionContent data={Data[display]} />
 				</div>
 			</div>
-			<DisplayContent data={Data[display]} />
 		</div>
 	)
 }

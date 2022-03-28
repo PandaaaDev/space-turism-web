@@ -15,7 +15,9 @@ const Navbar = ({ page }) => {
 	}
 	return (
 		<nav className='navbar'>
-			<Logo />
+			<Link to='/'>
+				<Logo />
+			</Link>
 			<button className='burgerBtn' onClick={showMenuHandler}>
 				{showMenu ? <BurgerIcon /> : <CrossIcon />}
 			</button>
