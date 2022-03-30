@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import DisplayImg from '../../components/displayImg/DisplayImg'
 import Navbar from '../../components/nav/Navbar'
 import Slide from '../../components/slide/Slide'
+import DisplayTechnologyContent from '../../components/displayTechnologyContent/DisplayTechnologyContent'
 const Technology = ({ Data }) => {
 	const [display, setDisplay] = useState(0)
 	const displayHandler = id => {
@@ -17,7 +18,7 @@ const Technology = ({ Data }) => {
 					<DisplayTechnologyContent data={Data[display]} />
 				</div>
 				<div className='right'>
-					<DisplayImg className={technologyImg} data={Data[display]} />
+					<div className='technologyImg'></div>
 				</div>
 			</div>
 		</div>
