@@ -1,0 +1,12 @@
+.slideContainer{
+    display: flex;
+    gap: 25px;
+    .slideBtn{
+        text-align: center;
+        width: 15px;
+        height: 15px;
+        background-color: white;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}

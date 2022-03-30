@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import DisplayImg from '../../components/displayImg/DisplayImg'
 import Navbar from '../../components/nav/Navbar'
 import Slide from '../../components/slide/Slide'
-import DisplayCrewContent from '../../components/displayContent/DisplayCrewContent'
-
+import DisplayCrewContent from '../../components/displayCrewContent/DisplayCrewContent'
+import './crew.scss'
 const Crew = ({ Data }) => {
 	const [display, setDisplay] = useState(0)
 	console.log(Data)
@@ -14,7 +14,7 @@ const Crew = ({ Data }) => {
 	return (
 		<div className='crew'>
 			<Navbar page='crew' />
-			<div className='crewTitle'></div>
+			<div className='crewTitle'><span>02</span>meet your crew</div>
 			<div className='crewContainer'>
 				<div className='left'>
 					<Slide data={Data} displayState={display} changeSlide={displayHandler} />
