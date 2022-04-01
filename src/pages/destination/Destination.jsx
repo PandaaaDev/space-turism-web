@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Navbar from '../../components/nav/Navbar'
-import DisplayDirectionContent from '../../components/displayDirectionContent/DisplayDirectionContent'
-import DisplayImg from '../../components/displayImg/DisplayImg'
+import DisplayDirectionContent from '../../components/displayContent/displayDirectionContent/DisplayDirectionContent'
+import DisplayImg from '../../components/displayContent/displayImg/DisplayImg'
 import Tabs from '../../components/tabs/Tabs'
 import './destination.scss'
 const Destination = ({ Data }) => {
@@ -13,15 +13,17 @@ const Destination = ({ Data }) => {
 		<div className='destination'>
 			<Navbar page='destination' />
 			<div className='container'>
-				<div className='left'>
-					<div className='title'>
+					<div className='sectionTitle'>
 						<span>01</span>pick your destination
 					</div>
-					<DisplayImg className='destinationImg' data={Data[display]} />
-				</div>
-				<div className='right'>
-					<Tabs displayState={display} data={Data} changeSlide={displayChangeHanlder} />
-					<DisplayDirectionContent data={Data[display]} />
+				<div className='content'>
+					<div className='left'>
+						<DisplayImg className='destinationImg' data={Data[display]} />
+					</div>
+					<div className='right'>
+						<Tabs displayState={display} data={Data} changeSlide={displayChangeHanlder} />
+						<DisplayDirectionContent data={Data[display]} />
+					</div>
 				</div>
 			</div>
 		</div>

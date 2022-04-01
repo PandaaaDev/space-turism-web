@@ -8,46 +8,27 @@
 	justify-content: center;
 	flex-direction: column;
 	overflow: hidden;
-	.crewTitle {
-		text-transform: uppercase;
-		color: white;
-		margin: 25px;
-		span {
-			color: grey;
-			font-weight: bold;
-			margin-right: 10px;
-		}
-	}
-	.crewContainer {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column-reverse;
-		padding: 0 7%;
-		gap: 30px;
-		.left {
-			.slideContainer {
-				.slideBtn {
-					span {
-						display: none;
+	.container {
+		.content {
+			.left {
+				.slideContainer {
+					.slideBtn {
+						transition: background-color 0.3s ease-in;
+						&:hover {
+							background-color: lightgrey;
+						}
+						span {
+							display: none;
+						}
 					}
 				}
 			}
-		}
-		.right {
-			display: flex;
-			flex-direction: column;
-			width: 100%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			.line {
-				height: 1px;
-				width: 100%;
-				background-color: #444;
-			}
-			.crewImg {
-				height: 350px;
+			.right {
+				.line {
+					height: 1px;
+					width: 100%;
+					background-color: #444;
+				}
 			}
 		}
 	}

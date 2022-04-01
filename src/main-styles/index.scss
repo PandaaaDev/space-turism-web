@@ -1,3 +1,5 @@
+@import './colors';
+@import './fonts';
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
 *,
 *::before,
@@ -9,11 +11,12 @@
 html {
 	font-size: 62.5%;
 	background-color: #333;
-	font-family: 'Barlow Condensed', sans-serif;
-	color: #d0d6f9;
+	font-family: $sanserif;
+	color: $purpleColor;
 }
-body{
+body {
 	height: 100%;
+	font-size: 1.8rem;
 }
 
 h1,
@@ -21,8 +24,8 @@ h2,
 h3,
 h4,
 h5 {
-	color: white;
-	font-family: 'Bellefair', serif;
+	color: $whiteColor;
+	font-family: $serif;
 }
 h1 {
 	font-size: 15rem;
@@ -43,8 +46,35 @@ h4 {
 h5 {
 	font-size: 2.8rem;
 	font-weight: normal;
+	letter-spacing: 4.75px;
 }
-p,
-div {
-	font-size: 1.8rem;
+.subheading1 {
+	font-size: 2.8rem;
+}
+.subheading2 {
+	font-size: 1.4rem;
+	letter-spacing: 2.35px;
+}
+.sectionTitle {
+	color: $whiteColor;
+	text-transform: uppercase;
+	font-size: 2.8rem;
+	text-align: center;
+	margin-bottom: 25px;
+	span {
+		color: grey;
+		margin-right: 15px;
+	}
+}
+.displayContentContainer {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 15px;
+}
+@media (min-width: 767px) {
+	.sectionTitle {
+		margin-top: 25px;
+		align-self: flex-start;
+	}
 }

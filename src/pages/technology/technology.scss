@@ -1,0 +1,112 @@
+@import '../../main-styles/colors';
+.technology {
+	position: relative;
+	background-image: url('../../assets/technology/background-technology-mobile.jpg');
+	background-size: cover;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	.container {
+		.content {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			gap: 25px;
+			padding: 0 5%;
+			.right {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				gap: 10px;
+				.slideContainer {
+					.slideBtn {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width: 40px;
+						height: 40px;
+						background-color: transparent;
+						border: 1px solid lightgray;
+						color: white;
+						&.active {
+							background-color: $whiteColor;
+							color: $darkColor;
+							border: none;
+						}
+					}
+				}
+			}
+		}
+		.left {
+			.technologyImg {
+				height: 180px;
+			}
+		}
+	}
+}
+
+@media (min-width: 426px) {
+	.technology {
+		background-image: url('../../assets/technology/background-technology-tablet.jpg');
+		.container {
+			.sectionTitle{
+				text-align: left;
+				padding: 0 7%;
+			}
+			.content {
+				.left {
+					.technologyImg {
+						height: 310px;
+					}
+				}
+				.right {
+					height: 280px;
+					.slideContainer {
+						.slideBtn {
+							width: 60px;
+							height: 60px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 1100px) {
+	.technology {
+		background-image: url('../../assets/technology/background-technology-desktop.jpg');
+
+		.container {
+			.content {
+				padding: 0 0 0 5% ;
+				flex-direction: row-reverse;
+				.left {
+					.technologyImg {
+						height: 527px;
+					}
+				}
+				.right {
+					flex-direction: row;
+					.slideContainer {
+						flex-direction: column;
+						.slideBtn {
+							font-size: 2.8rem;
+							width: 80px;
+							height: 80px;
+							background-color: transparent;
+							border: 1px solid lightgray;
+							&.active {
+								background-color: $whiteColor;
+								color: $darkColor;
+								border: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -8,7 +8,7 @@ const Slide = ({ data, displayState, changeSlide }) => {
 					className={displayState === e.id ? 'slideBtn active' : 'slideBtn'}
 					key={e.id}
 					onClick={() => changeSlide(e.id)}>
-					<span>{e.id}</span>
+					<span>{e.id + 1}</span>
 				</div>
 			))}
 		</div>

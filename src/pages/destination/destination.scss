@@ -14,32 +14,24 @@
 		align-items: center;
 		flex-direction: column;
 		gap: 25px;
-		.left {
-			width: 100%;
-			display: flex;
-			align-items: center;
-			flex-direction: column;
-			gap: 25px;
-			.destinationImg {
-				width: 170px;
-				height: 170px;
-			}
-			.title {
-				span {
-					color: darkgrey;
-					margin-right: 15px;
+		.content {
+			.left {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				gap: 25px;
+				.destinationImg {
+					width: 170px;
+					height: 170px;
 				}
-				color: white;
-				text-transform: uppercase;
 			}
-		}
-		.right {
-			width: 100%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: column;
-			gap: 10px;
+			.right {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				gap: 10px;
+			}
 		}
 	}
 }
@@ -47,19 +39,21 @@
 	.destination {
 		background-image: url('../../assets/destination/background-destination-tablet.jpg');
 		.container {
-			.left {
-				flex: 1;
-				.destinationImg {
-					width: 300px;
-					height: 300px;
+			.content {
+				.left {
+					flex: 1;
+					.destinationImg {
+						width: 300px;
+						height: 300px;
+					}
+					.title {
+						margin-top: 25px;
+						align-self: flex-start;
+					}
 				}
-				.title {
-					margin-top: 25px;
-					align-self: flex-start;
+				.right {
+					flex: 1;
 				}
-			}
-			.right {
-				flex: 1;
 			}
 		}
 	}
@@ -68,24 +62,22 @@
 	.destination {
 		background-image: url('../../assets/destination/background-destination-desktop.jpg');
 		.container {
-			flex-direction: row;
-			gap: 100px;
-
-			.left {
+			.content {
+				display: flex;
+				flex-direction: row;
 				gap: 100px;
-				.destinationImg {
-					width: 445px;
-					height: 445px;
+				.left {
+					gap: 100px;
+					.destinationImg {
+						width: 445px;
+						height: 445px;
+					}
 				}
-				.title {
-					font-size: 3.6rem;
-					// padding-bottom:50px;
+				.right {
+					align-items: flex-start;
+					justify-content: flex-start;
+					max-width: 700px;
 				}
-			}
-			.right {
-				align-items: flex-start;
-				justify-content: flex-start;
-				max-width: 700px;
 			}
 		}
 	}

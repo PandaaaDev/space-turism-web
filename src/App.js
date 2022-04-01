@@ -4,7 +4,7 @@ import Destination from './pages/destination/Destination'
 import Technology from './pages/technology/Technology'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Data from './fake-data/data.json'
-import './main-styles/app.scss'
+
 
 function App() {
 	return (
