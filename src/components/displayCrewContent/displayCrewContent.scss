@@ -1,0 +1,21 @@
+.contentDisplayContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+.crewmanRole{
+    color: grey;
+    margin-bottom: 5px;
+}
+.crewmanName{
+    color: white;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    font-family: 'Bellefair', serif;
+}
+.crewmanDescription{
+    text-align: center;
+    font-size: 2rem;
+    width: 300px;
+    height: 140px;
+}
+}

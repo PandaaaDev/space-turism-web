@@ -22,6 +22,7 @@ const Crew = ({ Data }) => {
 				</div>
 				<div className='right'>
 					<DisplayImg className={'crewImg'} data={Data[display]} />
+					<div className="line"></div>
 				</div>
 			</div>
 		</div>
