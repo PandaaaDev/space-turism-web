@@ -6,7 +6,6 @@ import DisplayCrewContent from '../../components/displayContent/displayCrewConte
 import './crew.scss'
 const Crew = ({ Data }) => {
 	const [display, setDisplay] = useState(0)
-	console.log(Data)
 	const displayHandler = id => {
 		setDisplay(id)
 	}
@@ -19,11 +18,9 @@ const Crew = ({ Data }) => {
 					<span>02</span>meet your crew
 				</div>
 				<div className='content'>
-					<div className='left'>
-						<Slide data={Data} displayState={display} changeSlide={displayHandler} />
-						<DisplayCrewContent data={Data[display]} />
-					</div>
-					<div className='right'>
+					<DisplayCrewContent data={Data[display]} />
+					<Slide data={Data} displayState={display} changeSlide={displayHandler} />
+					<div className='crewImgContainer'>
 						<DisplayImg className={'crewImg'} data={Data[display]} />
 						<div className='line'></div>
 					</div>

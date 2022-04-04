@@ -52,8 +52,8 @@
 	.technology {
 		background-image: url('../../assets/technology/background-technology-tablet.jpg');
 		.container {
-			.sectionTitle{
-				text-align: left;
+			.sectionTitle {
+				text-align: center;
 				padding: 0 7%;
 			}
 			.content {
@@ -75,13 +75,22 @@
 		}
 	}
 }
+@media (min-width: 670px) {
+	.technology {
+		.container {
+			.sectionTitle {
+				text-align: left;
+			}
+		}
+	}
+}
 @media (min-width: 1100px) {
 	.technology {
 		background-image: url('../../assets/technology/background-technology-desktop.jpg');
 
 		.container {
 			.content {
-				padding: 0 0 0 5% ;
+				padding: 0 0 0 5%;
 				flex-direction: row-reverse;
 				.left {
 					.technologyImg {

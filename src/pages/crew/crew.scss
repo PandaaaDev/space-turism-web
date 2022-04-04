@@ -9,26 +9,114 @@
 	flex-direction: column;
 	overflow: hidden;
 	.container {
+		width: 100%;
+		display: flex;
+		justify-items: center;
+		align-items: center;
+		flex-direction: column;
 		.content {
-			.left {
-				.slideContainer {
-					.slideBtn {
-						transition: background-color 0.3s ease-in;
-						&:hover {
-							background-color: lightgrey;
-						}
-						span {
-							display: none;
-						}
-					}
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column-reverse;
+			gap: 15px;
+		}
+		.slideContainer {
+			.slideBtn {
+				transition: background-color 0.3s ease-in;
+				&:hover {
+					background-color: lightgrey;
+				}
+				span {
+					display: none;
 				}
 			}
-			.right {
-				.line {
-					height: 1px;
-					width: 100%;
-					background-color: #444;
+		}
+		.crewImgContainer {
+			width: 327px;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			.crewImg {
+				height: 222px;
+			}
+			.line {
+				height: 1px;
+				width: 100%;
+				background-color: #555;
+			}
+		}
+	}
+}
+@media (min-width: 768px) {
+	.crew {
+		.container {
+			position: absolute;
+			bottom: 0;
+			.content {
+				flex-direction: column;
+			}
+			.crewImgContainer {
+				.crewImg {
+					height: 532px;
 				}
+				.line {
+					display: none;
+				}
+			}
+			.sectionTitle {
+				margin-left: 7%;
+			}
+			.displayContentContainer {
+				width: 520px;
+				height: 232px;
+			}
+		}
+	}
+}
+@media (min-width: 1024px) {
+	.crew {
+		.container {
+			.content {
+				height: 75vh;
+				width: 100%;
+				position: relative;
+				flex-direction: row;
+			}
+			.crewImgContainer {
+				position: absolute;
+				bottom: 0;
+				right: 15%;
+				.crewImg {
+					height: auto;
+				}
+				.line {
+					display: none;
+				}
+			}
+			.displayContentContainer {
+				position: absolute;
+				align-items: flex-start;
+				top: 25%;
+				left: 15%;
+				height: auto;
+				.crewmanRole {
+					font-size: 3.2rem;
+				}
+				.crewmanName {
+					font-size: 5.8rem;
+				}
+				.crewmanDescription {
+					font-size: 2.4rem;
+					text-align: left;
+					padding: 0;
+				}
+			}
+			.slideContainer {
+				margin: 0;
+				position: absolute;
+				bottom: 35px;
+				left: 15%;
 			}
 		}
 	}
